@@ -49,11 +49,11 @@ selector_drag_offset = 0
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': '',
+    'password': 'Vinay@050209',
     'database': 'gravity_simulator'
 }
 
-pygame.display.set_caption("Gravity Simulator - Press E,V,M,J,S,B,P to spawn")
+pygame.display.set_caption("Gravity Simulator")
 fps = 27
 clock = pygame.time.Clock()
 
@@ -520,7 +520,7 @@ def draw_planet_creator_overlay():
         radius = float(creator_state['radius']) if creator_state['radius'] else 1
         calc_density = calculate_density(mass, radius)
         density_text = small_font.render(f"Calculated Density: {calc_density:.3f}", True, (100, 255, 100))
-        display.blit(density_text, (label_x, field_start_y + field_spacing * 3 + 10))
+        display.blit(density_text, (label_x, field_start_y + field_spacing * 3 - 20))
     except:
         pass
     
